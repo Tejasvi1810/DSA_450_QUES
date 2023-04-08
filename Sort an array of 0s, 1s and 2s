@@ -1,0 +1,40 @@
+class Solution
+{
+    public:
+    void sort012(int a[], int n)
+    {
+        // count store hoga jisme vo variable bna re hai...
+        
+        int zeroCount=0;
+        int oneCount=0;
+        int twoCount=0;
+        
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]==0)
+                zeroCount++;
+            if(a[i]==1)
+                oneCount++;
+            if(a[i]==2)
+                twoCount++;
+                
+        }
+        
+        // 0 walle num print kra re hai 
+        for(int i=0;i<zeroCount;i++)
+            a[i]=0;
+            
+            // 1 ko kaha sai fill krege jaha sai 0 wala khtm hoga 
+        // 1 walle num print kra re hai 
+        for(int i=zeroCount;i<zeroCount+oneCount;i++)
+            a[i]=1;
+            
+            
+        // 2 walle num print kra re hai     
+        for(int i=zeroCount+oneCount;i<n;i++)
+            a[i]=2;
+            
+        }
+    
+    
+};
